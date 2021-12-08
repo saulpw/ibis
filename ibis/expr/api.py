@@ -1222,14 +1222,14 @@ def bottomk(arg, k, by=None):
     raise NotImplementedError
 
 
-def _generic_summary(arg, exact_nunique=False, prefix="", suffix=""):
+def _generic_summary(arg, exact_nunique=True, prefix="", suffix=""):
     """
     Compute a set of summary metrics from the input value expression
 
     Parameters
     ----------
     arg : value expression
-    exact_nunique : boolean, default False
+    exact_nunique : boolean, default True
       Compute the exact number of distinct values (slower)
     prefix : string, default ""
       String prefix for metric names
@@ -1251,14 +1251,14 @@ def _generic_summary(arg, exact_nunique=False, prefix="", suffix=""):
     return metrics
 
 
-def _numeric_summary(arg, exact_nunique=False, prefix="", suffix=""):
+def _numeric_summary(arg, exact_nunique=True, prefix="", suffix=""):
     """
     Compute a set of summary metrics from the input numeric value expression
 
     Parameters
     ----------
     arg : numeric value expression
-    exact_nunique : boolean, default False
+    exact_nunique : boolean, default True
     prefix : string, default ""
       String prefix for metric names
     suffix : string, default ""
