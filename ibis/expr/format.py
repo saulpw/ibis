@@ -203,7 +203,7 @@ class ExprFormatter:
         table_formatted = self.memo.get_alias(parent)
 
         type_display = self._get_type_display(self.expr)
-        return "Column[{}] '{!r}' from {}".format(
+        return "Column[{}] {!r} from {}".format(
             type_display, col.name, table_formatted
         )
 
